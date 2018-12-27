@@ -1,0 +1,54 @@
+.about
+  background: rgb(255,255,255) /* Old browsers */
+  background: linear-gradient(to bottom, white 0%, #fafafa 100%) /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#fafafa',GradientType=0 ) /* IE6-9 */
+  .heading
+    color: #293c52
+  .content
+    display: block
+    position: relative
+    justify-content: space-between
+    align-items: center
+    color: black
+    font-size: 1.3rem
+    font-family: 'Open Sans Hebrew', sans-serif;
+    text-align: right
+    @media (min-width: 481px) 
+      font-size: 1.5rem
+    @media (min-width: 768px)
+      display: flex
+    .la-icon
+      flex: 1 1 auto
+      font-size: 20rem
+      color: #ecedef
+      line-height: 20rem
+      text-align: left
+    .photo
+      width: 100%
+      @media (min-width: 768px)
+        width: 48%
+      img
+        max-width: 100%
+        @media (min-width: 768px)
+          max-width: 600px
+    .text
+      position: relative
+      padding: 0 2rem
+      margin-bottom: 2rem
+      width: 100%
+      @media (min-width: 768px)
+        width: 48%
+        margin-bottom: 0
+    @media(max-width: 768px)
+      padding: 0
+      .la-icon
+        display: none
+        position: absolute
+        top: 50%
+        left: 0 
+        font-size: 30rem
+        transform: translate(-50%, -50%)
+        opacity: .4
+        line-height: 30rem
+      .text
+        padding: 0 .5rem

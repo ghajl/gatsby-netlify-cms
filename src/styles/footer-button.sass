@@ -1,0 +1,22 @@
+.footer-button a
+  position: fixed
+  right: 0
+  z-index: 30
+  bottom: 0
+  height: 5rem
+  background-color: #0099ff
+  color: white
+  font-weight: 700
+  width: 100%
+  text-align: center
+  display: flex
+  justify-content: center
+  align-items: center
+  &:hover, &:focus, &:active, &:visited
+    color: white
+  @media(min-width: 481px)
+    display: none
+  .wrapper
+    font-size: 2rem
+    & > *
+      margin: .5rem

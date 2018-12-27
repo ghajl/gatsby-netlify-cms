@@ -1,0 +1,63 @@
+.contact-form-bottom
+  background-color: #283B51
+  background: linear-gradient(200deg, #283b51 0%, #384860 100%)
+  color: white
+  padding: 1rem
+
+  .form-bottom-wrapper
+    padding-top: 1rem
+    position: relative
+    padding-bottom: 5rem
+    @media (min-width: 481px)
+      padding-bottom: 0
+    @media (min-width: 1024px)
+      display: flex
+      justify-content: center
+      flex-wrap: wrap
+      
+  font-family: "Heebo",Sans-serif;
+  fieldset 
+    display: inline-block
+    padding-block-start: 0.35em
+    padding-inline-start: 0.75em
+    padding-inline-end: 0.75em
+    padding-block-end: 0.625em
+    border: none
+    width: 100%
+  legend
+    font-size: 1.2rem
+  .contact-form-bottom-heading
+    text-align: center
+    font-size: 1.4rem
+  .input-field
+    position: relative
+    height: 3rem 
+    margin: 1rem 0
+    @media (min-width: 1024px)
+      display: inline-block
+    .la-label
+      display: inline-block
+    label
+      height: 3rem    
+      line-height: 3rem
+      display: flex
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-95px, -50%)
+      width: auto
+      @media (min-width: 1024px)
+        position: relative
+        top: 0
+        left: 0
+        transform: none
+        margin-left: 2rem
+    input, select, textarea 
+      margin: 0 .5rem 0 0
+      height: 3rem
+      border: none
+      box-shadow: none
+      width: 190px
+    input[type="submit"] 
+      margin: 0 auto
+      

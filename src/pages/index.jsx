@@ -37,26 +37,50 @@ export const mainPageQuery = graphql`
       frontmatter {
         intro {
           heading
-          backgroundImage
+          backgroundImage {
+            childImageSharp {
+              fluid(maxWidth: 2048, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
           items {
             text
           }
         }
         about {
           heading
-          image
+          image {
+            childImageSharp {
+              fluid(maxWidth: 2048, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
           text
         }
         skills {
           heading
-          image
+          image {
+            childImageSharp {
+              fluid(maxWidth: 2048, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
           items {
             text
           }
         }
         clients {
           heading
-          backgroundImage
+          backgroundImage {
+            childImageSharp {
+              fluid(maxWidth: 2048, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
           description
           items {
             text

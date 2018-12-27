@@ -31,7 +31,11 @@ class Hero extends React.PureComponent {
           className="backgroundRear"
           style={{
             transform: `translate3d(0px, ${top}px, 0px)`,
-            backgroundImage: `url(${intro.backgroundImage})`
+            backgroundImage: `url(${
+              intro.backgroundImage.childImageSharp
+                ? intro.backgroundImage.childImageSharp.fluid.src
+                : intro.backgroundImage
+            })`
           }}
         />
       </div>

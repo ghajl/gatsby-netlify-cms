@@ -16,7 +16,10 @@ const Skills = ({ skills }) => (
         </ul>
       </div>
       <div className="photo">
-        <img src={skills.image} alt="" />
+        <img
+          src={skills.image.childImageSharp ? skills.image.childImageSharp.fluid.src : skills.image}
+          alt=""
+        />
       </div>
     </div>
   </div>

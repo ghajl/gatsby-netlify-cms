@@ -25,7 +25,11 @@ const Clients = ({ clients, top }) => (
     <div
       className="backgroundRear"
       style={{
-        backgroundImage: `url(${clients.backgroundImage})`
+        backgroundImage: `url(${
+          clients.backgroundImage.childImageSharp
+            ? clients.backgroundImage.childImageSharp.fluid.src
+            : clients.backgroundImage
+        })`
       }}
     />
   </div>

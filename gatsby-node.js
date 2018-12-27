@@ -1,5 +1,6 @@
 const remark = require('remark');
 const remarkHTML = require('remark-html');
+const { fmImagesToRelative } = require('gatsby-remark-relative-images');
 
 const traverseArray = arr => {
   arr.forEach(x => traverse(x));
@@ -30,6 +31,7 @@ function traverse(x) {
 }
 
 exports.onCreateNode = ({ node }) => {
+  fmImagesToRelative(node);
   if (node.frontmatter) {
     traverse(node.frontmatter);
   }

@@ -10,7 +10,10 @@ const About = ({ about }) => (
         {about.text}
       </HTMLElement>
       <div className="photo">
-        <img src={about.image} alt="" />
+        <img
+          src={about.image.childImageSharp ? about.image.childImageSharp.fluid.src : about.image}
+          alt=""
+        />
       </div>
     </div>
   </div>

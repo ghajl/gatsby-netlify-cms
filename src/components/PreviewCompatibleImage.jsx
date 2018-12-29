@@ -38,12 +38,18 @@ const PreviewCompatibleImage = ({ style, className, imageInfo }) => {
 
   if (image && typeof image === 'string')
     return (
-      <img className={`${className}`} style={{ ...style, ...imageStyle }} src={image} alt={alt} />
+      <React.Fragment>
+        <div style={{ width: '100%', paddingBottom: '66.6667%' }} />
+        <img className={`${className}`} style={{ ...style, ...imageStyle }} src={image} alt={alt} />
+      </React.Fragment>
     );
 
   if (!image && value)
     return (
-      <img className={`${className}`} style={{ ...style, ...imageStyle }} src={value} alt={alt} />
+      <React.Fragment>
+        <div style={{ width: '100%', paddingBottom: '66.6667%' }} />
+        <img className={`${className}`} style={{ ...style, ...imageStyle }} src={value} alt={alt} />
+      </React.Fragment>
     );
   return null;
 };

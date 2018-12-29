@@ -39,7 +39,7 @@ export const mainPageQuery = graphql`
           heading
           backgroundImage {
             childImageSharp {
-              fluid(maxWidth: 2048, quality: 100) {
+              fluid(maxWidth: 2048, quality: 80, cropFocus: CENTER) {
                 ...GatsbyImageSharpFluid
               }
             }

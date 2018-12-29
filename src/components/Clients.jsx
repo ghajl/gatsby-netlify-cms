@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import HTMLElement from './HTMLElement';
+import PreviewCompatibleImage from './PreviewCompatibleImage';
 
 const Clients = ({ clients, top }) => (
   <div className="">
@@ -22,15 +23,12 @@ const Clients = ({ clients, top }) => (
         ))}
       </ul>
     </div>
-    <div
+    <PreviewCompatibleImage
       className="backgroundRear"
       style={{
-        backgroundImage: `url(${
-          clients.backgroundImage.childImageSharp
-            ? clients.backgroundImage.childImageSharp.fluid.src
-            : clients.backgroundImage
-        })`
+        position: 'absolute'
       }}
+      imageInfo={clients.backgroundImage}
     />
   </div>
 );

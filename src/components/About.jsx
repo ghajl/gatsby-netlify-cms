@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import HTMLElement from './HTMLElement';
+import PreviewCompatibleImage from './PreviewCompatibleImage';
 
 const About = ({ about }) => (
   <div className="container">
@@ -10,10 +11,7 @@ const About = ({ about }) => (
         {about.text}
       </HTMLElement>
       <div className="photo">
-        <img
-          src={about.image.childImageSharp ? about.image.childImageSharp.fluid.src : about.image}
-          alt=""
-        />
+        <PreviewCompatibleImage imageInfo={about.image} />
       </div>
     </div>
   </div>

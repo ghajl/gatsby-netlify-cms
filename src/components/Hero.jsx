@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import HTMLElement from './HTMLElement';
 import ContactForm from './ContactForm';
+import PreviewCompatibleImage from './PreviewCompatibleImage';
 
 class Hero extends React.PureComponent {
   render() {
@@ -27,16 +28,14 @@ class Hero extends React.PureComponent {
             </div>
           </div>
         </div>
-        <div
+
+        <PreviewCompatibleImage
           className="backgroundRear"
           style={{
             transform: `translate3d(0px, ${top}px, 0px)`,
-            backgroundImage: `url(${
-              intro.backgroundImage.childImageSharp
-                ? intro.backgroundImage.childImageSharp.fluid.src
-                : intro.backgroundImage
-            })`
+            position: 'absolute'
           }}
+          imageInfo={intro.backgroundImage}
         />
       </div>
     );

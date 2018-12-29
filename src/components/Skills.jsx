@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import HTMLElement from './HTMLElement';
+import PreviewCompatibleImage from './PreviewCompatibleImage';
 
 const Skills = ({ skills }) => (
   <div className="">
@@ -16,10 +17,7 @@ const Skills = ({ skills }) => (
         </ul>
       </div>
       <div className="photo">
-        <img
-          src={skills.image.childImageSharp ? skills.image.childImageSharp.fluid.src : skills.image}
-          alt=""
-        />
+        <PreviewCompatibleImage imageInfo={skills.image} />
       </div>
     </div>
   </div>

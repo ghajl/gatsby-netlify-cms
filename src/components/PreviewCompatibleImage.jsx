@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Img from 'gatsby-image';
 
 const PreviewCompatibleImage = ({ style, className, imageInfo }) => {
-  const { alt = '', childImageSharp, image } = imageInfo;
+  const { alt = '', childImageSharp, image, value = '' } = imageInfo;
   console.log(imageInfo);
   if (image && image.childImageSharp) {
     return (
@@ -30,6 +30,8 @@ const PreviewCompatibleImage = ({ style, className, imageInfo }) => {
   if (image && typeof image === 'string')
     return <img className={`${className}`} style={{ ...style }} src={image} alt={alt} />;
 
+  if (!image && value)
+    return <img className={`${className}`} style={{ ...style }} src={value} alt={alt} />;
   return null;
 };
 
@@ -38,6 +40,7 @@ PreviewCompatibleImage.propTypes = {
   style: PropTypes.shape({}),
   imageInfo: PropTypes.shape({
     alt: PropTypes.string,
+    value: PropTypes.string,
     childImageSharp: PropTypes.object,
     image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]).isRequired
   }).isRequired

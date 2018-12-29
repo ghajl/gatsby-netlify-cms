@@ -4,6 +4,15 @@ import Img from 'gatsby-image';
 
 const PreviewCompatibleImage = ({ style, className, imageInfo }) => {
   const { alt = '', childImageSharp, image, value = '' } = imageInfo;
+  const imageStyle = {
+    position: 'absolute',
+    top: '0px',
+    left: '0px',
+    width: '100%',
+    height: '100%',
+    objectFit: 'cover',
+    objectPosition: 'center center'
+  };
   console.log(imageInfo);
   if (image && image.childImageSharp) {
     return (
@@ -28,10 +37,14 @@ const PreviewCompatibleImage = ({ style, className, imageInfo }) => {
   }
 
   if (image && typeof image === 'string')
-    return <img className={`${className}`} style={{ ...style }} src={image} alt={alt} />;
+    return (
+      <img className={`${className}`} style={{ ...style, ...imageStyle }} src={image} alt={alt} />
+    );
 
   if (!image && value)
-    return <img className={`${className}`} style={{ ...style }} src={value} alt={alt} />;
+    return (
+      <img className={`${className}`} style={{ ...style, ...imageStyle }} src={value} alt={alt} />
+    );
   return null;
 };
 

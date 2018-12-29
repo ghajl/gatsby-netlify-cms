@@ -1,6 +1,6 @@
 ---
 templateKey: main-page
-title: טייטלמן יועצים  הנדסת מים שחוסכת כסף
+title: יועצים הנדסת מים שחוסכת כסף
 intro:
   backgroundImage: /img/water-nature.jpg
   heading: יעוץ פרויקטים לאספקה וחיסכון במים
